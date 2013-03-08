@@ -18,14 +18,7 @@
         {
             get
             {
-                try
-                {
-                    return GetDisplayName("en", this.Id);
-                }
-                catch (Exception)
-                {
-                    return string.Empty;
-                }
+                return GetDisplayName("en", this.Id);
             }
         }
 
@@ -57,7 +50,7 @@
             if (culture != null)
             {
                 return (from ldn in culture.RegionDisplayNames
-                        where string.Compare(ldn.Id, languageId, false, CultureInfo.InvariantCulture) == 0
+                        where string.Compare(ldn.Id, languageId, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                         select ldn.Name).FirstOrDefault();
             }
 

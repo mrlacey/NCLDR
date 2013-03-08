@@ -158,14 +158,19 @@ namespace NCldr.Builder
 
         private static void Build(NCldrData ncldrData)
         {
-            string ncldrFile = Path.Combine(ncldrPath, "NCldr.dat");
+            //string ncldrFile = Path.Combine(ncldrPath, "NCldr.dat");
+            string ncldrFile = Path.Combine(ncldrPath, "NCldr.json");
             Progress("Writing data file", ncldrFile);
 
-            FileStream fileStream = new FileStream(ncldrFile, FileMode.Create);
-            BinaryFormatter formatter = new BinaryFormatter();
+            //FileStream fileStream = new FileStream(ncldrFile, FileMode.Create);
+            //BinaryFormatter formatter = new BinaryFormatter();
             try
             {
-                formatter.Serialize(fileStream, ncldrData);
+                //formatter.Serialize(fileStream, ncldrData);
+
+                var serialized = Newtonsoft.Json.JsonConvert.SerializeObject(ncldrData);
+                File.WriteAllText(ncldrFile, serialized);
+
             }
             catch (SerializationException exception)
             {
@@ -174,7 +179,7 @@ namespace NCldr.Builder
             }
             finally
             {
-                fileStream.Close();
+               // fileStream.Close();
             }
         }
 

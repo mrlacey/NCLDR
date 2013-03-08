@@ -618,21 +618,14 @@
         {
             get
             {
-                try
-                {
                 if (NCldr.NumberingSystems == null)
                 {
                     return null;
                 }
 
                 return (from nst in NCldr.NumberingSystems
-                        where string.Compare(nst.Id, this.Id, false, CultureInfo.InvariantCulture) == 0
+                        where string.Compare(nst.Id, this.Id, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                         select nst).FirstOrDefault();
-                }
-                catch (Exception)
-                {
-                    return null;
-                }
             }
         }
 

@@ -18,14 +18,7 @@
         {
             get
             {
-                try
-                {
-                    return GetDisplayName("en", this.Id);
-                }
-                catch (Exception)
-                {
-                    return string.Empty;
-                }
+                return GetDisplayName("en", this.Id);
             }
         }
 
@@ -36,20 +29,13 @@
         {
             get
             {
-                try
+                string nativeName = GetDisplayName(this.Id, this.Id);
+                if (string.IsNullOrEmpty(nativeName))
                 {
-                    string nativeName = GetDisplayName(this.Id, this.Id);
-                    if (string.IsNullOrEmpty(nativeName))
-                    {
-                        return this.EnglishName;
-                    }
+                    return this.EnglishName;
+                }
 
-                    return nativeName;
-                }
-                catch (Exception)
-                {
-                    return string.Empty;
-                }
+                return nativeName;
             }
         }
 
@@ -81,7 +67,7 @@
             if (culture != null)
             {
                 return (from ldn in culture.LanguageDisplayNames
-                        where string.Compare(ldn.Id, languageId, false, CultureInfo.InvariantCulture) == 0
+                        where string.Compare(ldn.Id, languageId, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                         select ldn.Name).FirstOrDefault();
             }
 

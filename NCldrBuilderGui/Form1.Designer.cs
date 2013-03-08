@@ -41,6 +41,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxIncludeRegionTelephoneCodes = new System.Windows.Forms.CheckBox();
             this.cbxIncludeWindowsMetaTimeZones = new System.Windows.Forms.CheckBox();
             this.cbxIncludeWeekData = new System.Windows.Forms.CheckBox();
             this.cbxIncludeTimeZones = new System.Windows.Forms.CheckBox();
@@ -74,6 +75,10 @@
             this.rbIncludeOnly = new System.Windows.Forms.RadioButton();
             this.rbExclude = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbxIncludeUnitPatternSets = new System.Windows.Forms.CheckBox();
+            this.cbxIncludeListPatterns = new System.Windows.Forms.CheckBox();
+            this.cbxIncludeDelimiters = new System.Windows.Forms.CheckBox();
+            this.cbxIncludeCharacters = new System.Windows.Forms.CheckBox();
             this.cbxIncludeRuleBasedNumberFormatting = new System.Windows.Forms.CheckBox();
             this.cbxIncludeNumbers = new System.Windows.Forms.CheckBox();
             this.cbxIncludeMessages = new System.Windows.Forms.CheckBox();
@@ -87,11 +92,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.cbxIncludeRegionTelephoneCodes = new System.Windows.Forms.CheckBox();
-            this.cbxIncludeCharacters = new System.Windows.Forms.CheckBox();
-            this.cbxIncludeDelimiters = new System.Windows.Forms.CheckBox();
-            this.cbxIncludeListPatterns = new System.Windows.Forms.CheckBox();
-            this.cbxIncludeUnitPatternSets = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbxProgress.SuspendLayout();
@@ -180,7 +180,7 @@
             this.tbxNCldrPath.Name = "tbxNCldrPath";
             this.tbxNCldrPath.Size = new System.Drawing.Size(334, 20);
             this.tbxNCldrPath.TabIndex = 4;
-            this.tbxNCldrPath.Text = "C:\\Projects\\NCldr\\Source\\NCldr\\NCldrData";
+            this.tbxNCldrPath.Text = "C:\\Users\\Matt\\Documents\\GitHub\\NCLDR\\NCldrData";
             // 
             // tbxCldrPath
             // 
@@ -188,7 +188,7 @@
             this.tbxCldrPath.Name = "tbxCldrPath";
             this.tbxCldrPath.Size = new System.Drawing.Size(334, 20);
             this.tbxCldrPath.TabIndex = 1;
-            this.tbxCldrPath.Text = "C:\\CLDR\\Release22.1";
+            this.tbxCldrPath.Text = "C:\\Users\\Matt\\Documents\\CLDR\\22.1";
             // 
             // label2
             // 
@@ -272,6 +272,19 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
+            // 
+            // cbxIncludeRegionTelephoneCodes
+            // 
+            this.cbxIncludeRegionTelephoneCodes.AutoSize = true;
+            this.cbxIncludeRegionTelephoneCodes.Checked = true;
+            this.cbxIncludeRegionTelephoneCodes.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxIncludeRegionTelephoneCodes.Location = new System.Drawing.Point(199, 227);
+            this.cbxIncludeRegionTelephoneCodes.Name = "cbxIncludeRegionTelephoneCodes";
+            this.cbxIncludeRegionTelephoneCodes.Size = new System.Drawing.Size(184, 17);
+            this.cbxIncludeRegionTelephoneCodes.TabIndex = 24;
+            this.cbxIncludeRegionTelephoneCodes.Text = "Include region telephone codes ?";
+            this.cbxIncludeRegionTelephoneCodes.UseVisualStyleBackColor = true;
+            this.cbxIncludeRegionTelephoneCodes.CheckedChanged += new System.EventHandler(this.cbxIncludeRegionTelephoneCodes_CheckedChanged);
             // 
             // cbxIncludeWindowsMetaTimeZones
             // 
@@ -701,6 +714,58 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             // 
+            // cbxIncludeUnitPatternSets
+            // 
+            this.cbxIncludeUnitPatternSets.AutoSize = true;
+            this.cbxIncludeUnitPatternSets.Checked = true;
+            this.cbxIncludeUnitPatternSets.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxIncludeUnitPatternSets.Location = new System.Drawing.Point(6, 280);
+            this.cbxIncludeUnitPatternSets.Name = "cbxIncludeUnitPatternSets";
+            this.cbxIncludeUnitPatternSets.Size = new System.Drawing.Size(148, 17);
+            this.cbxIncludeUnitPatternSets.TabIndex = 12;
+            this.cbxIncludeUnitPatternSets.Text = "Include unit pattern sets ?";
+            this.cbxIncludeUnitPatternSets.UseVisualStyleBackColor = true;
+            this.cbxIncludeUnitPatternSets.CheckedChanged += new System.EventHandler(this.cbxIncludeUnitPatternSets_CheckedChanged);
+            // 
+            // cbxIncludeListPatterns
+            // 
+            this.cbxIncludeListPatterns.AutoSize = true;
+            this.cbxIncludeListPatterns.Checked = true;
+            this.cbxIncludeListPatterns.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxIncludeListPatterns.Location = new System.Drawing.Point(6, 188);
+            this.cbxIncludeListPatterns.Name = "cbxIncludeListPatterns";
+            this.cbxIncludeListPatterns.Size = new System.Drawing.Size(126, 17);
+            this.cbxIncludeListPatterns.TabIndex = 11;
+            this.cbxIncludeListPatterns.Text = "Include list patterns ?";
+            this.cbxIncludeListPatterns.UseVisualStyleBackColor = true;
+            this.cbxIncludeListPatterns.CheckedChanged += new System.EventHandler(this.cbxIncludeListPatterns_CheckedChanged);
+            // 
+            // cbxIncludeDelimiters
+            // 
+            this.cbxIncludeDelimiters.AutoSize = true;
+            this.cbxIncludeDelimiters.Checked = true;
+            this.cbxIncludeDelimiters.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxIncludeDelimiters.Location = new System.Drawing.Point(6, 165);
+            this.cbxIncludeDelimiters.Name = "cbxIncludeDelimiters";
+            this.cbxIncludeDelimiters.Size = new System.Drawing.Size(116, 17);
+            this.cbxIncludeDelimiters.TabIndex = 10;
+            this.cbxIncludeDelimiters.Text = "Include delimiters ?";
+            this.cbxIncludeDelimiters.UseVisualStyleBackColor = true;
+            this.cbxIncludeDelimiters.CheckedChanged += new System.EventHandler(this.cbxIncludeDelimiters_CheckedChanged);
+            // 
+            // cbxIncludeCharacters
+            // 
+            this.cbxIncludeCharacters.AutoSize = true;
+            this.cbxIncludeCharacters.Checked = true;
+            this.cbxIncludeCharacters.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxIncludeCharacters.Location = new System.Drawing.Point(6, 119);
+            this.cbxIncludeCharacters.Name = "cbxIncludeCharacters";
+            this.cbxIncludeCharacters.Size = new System.Drawing.Size(123, 17);
+            this.cbxIncludeCharacters.TabIndex = 9;
+            this.cbxIncludeCharacters.Text = "Include characters ?";
+            this.cbxIncludeCharacters.UseVisualStyleBackColor = true;
+            this.cbxIncludeCharacters.CheckedChanged += new System.EventHandler(this.cbxIncludeCharacters_CheckedChanged);
+            // 
             // cbxIncludeRuleBasedNumberFormatting
             // 
             this.cbxIncludeRuleBasedNumberFormatting.AutoSize = true;
@@ -853,71 +918,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // cbxIncludeRegionTelephoneCodes
-            // 
-            this.cbxIncludeRegionTelephoneCodes.AutoSize = true;
-            this.cbxIncludeRegionTelephoneCodes.Checked = true;
-            this.cbxIncludeRegionTelephoneCodes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxIncludeRegionTelephoneCodes.Location = new System.Drawing.Point(199, 227);
-            this.cbxIncludeRegionTelephoneCodes.Name = "cbxIncludeRegionTelephoneCodes";
-            this.cbxIncludeRegionTelephoneCodes.Size = new System.Drawing.Size(184, 17);
-            this.cbxIncludeRegionTelephoneCodes.TabIndex = 24;
-            this.cbxIncludeRegionTelephoneCodes.Text = "Include region telephone codes ?";
-            this.cbxIncludeRegionTelephoneCodes.UseVisualStyleBackColor = true;
-            this.cbxIncludeRegionTelephoneCodes.CheckedChanged += new System.EventHandler(this.cbxIncludeRegionTelephoneCodes_CheckedChanged);
-            // 
-            // cbxIncludeCharacters
-            // 
-            this.cbxIncludeCharacters.AutoSize = true;
-            this.cbxIncludeCharacters.Checked = true;
-            this.cbxIncludeCharacters.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxIncludeCharacters.Location = new System.Drawing.Point(6, 119);
-            this.cbxIncludeCharacters.Name = "cbxIncludeCharacters";
-            this.cbxIncludeCharacters.Size = new System.Drawing.Size(123, 17);
-            this.cbxIncludeCharacters.TabIndex = 9;
-            this.cbxIncludeCharacters.Text = "Include characters ?";
-            this.cbxIncludeCharacters.UseVisualStyleBackColor = true;
-            this.cbxIncludeCharacters.CheckedChanged += new System.EventHandler(this.cbxIncludeCharacters_CheckedChanged);
-            // 
-            // cbxIncludeDelimiters
-            // 
-            this.cbxIncludeDelimiters.AutoSize = true;
-            this.cbxIncludeDelimiters.Checked = true;
-            this.cbxIncludeDelimiters.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxIncludeDelimiters.Location = new System.Drawing.Point(6, 165);
-            this.cbxIncludeDelimiters.Name = "cbxIncludeDelimiters";
-            this.cbxIncludeDelimiters.Size = new System.Drawing.Size(116, 17);
-            this.cbxIncludeDelimiters.TabIndex = 10;
-            this.cbxIncludeDelimiters.Text = "Include delimiters ?";
-            this.cbxIncludeDelimiters.UseVisualStyleBackColor = true;
-            this.cbxIncludeDelimiters.CheckedChanged += new System.EventHandler(this.cbxIncludeDelimiters_CheckedChanged);
-            // 
-            // cbxIncludeListPatterns
-            // 
-            this.cbxIncludeListPatterns.AutoSize = true;
-            this.cbxIncludeListPatterns.Checked = true;
-            this.cbxIncludeListPatterns.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxIncludeListPatterns.Location = new System.Drawing.Point(6, 188);
-            this.cbxIncludeListPatterns.Name = "cbxIncludeListPatterns";
-            this.cbxIncludeListPatterns.Size = new System.Drawing.Size(126, 17);
-            this.cbxIncludeListPatterns.TabIndex = 11;
-            this.cbxIncludeListPatterns.Text = "Include list patterns ?";
-            this.cbxIncludeListPatterns.UseVisualStyleBackColor = true;
-            this.cbxIncludeListPatterns.CheckedChanged += new System.EventHandler(this.cbxIncludeListPatterns_CheckedChanged);
-            // 
-            // cbxIncludeUnitPatternSets
-            // 
-            this.cbxIncludeUnitPatternSets.AutoSize = true;
-            this.cbxIncludeUnitPatternSets.Checked = true;
-            this.cbxIncludeUnitPatternSets.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxIncludeUnitPatternSets.Location = new System.Drawing.Point(6, 280);
-            this.cbxIncludeUnitPatternSets.Name = "cbxIncludeUnitPatternSets";
-            this.cbxIncludeUnitPatternSets.Size = new System.Drawing.Size(148, 17);
-            this.cbxIncludeUnitPatternSets.TabIndex = 12;
-            this.cbxIncludeUnitPatternSets.Text = "Include unit pattern sets ?";
-            this.cbxIncludeUnitPatternSets.UseVisualStyleBackColor = true;
-            this.cbxIncludeUnitPatternSets.CheckedChanged += new System.EventHandler(this.cbxIncludeUnitPatternSets_CheckedChanged);
             // 
             // Form1
             // 

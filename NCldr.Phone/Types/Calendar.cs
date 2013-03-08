@@ -59,16 +59,9 @@
         {
             get
             {
-                try
-                {
-                    return (from ct in NCldr.CalendarTypes
-                            where string.Compare(ct.Id, this.Id, false, CultureInfo.InvariantCulture) == 0
-                            select ct).FirstOrDefault();
-                }
-                catch (Exception)
-                {
-                    return null;
-                }
+                return (from ct in NCldr.CalendarTypes
+                        where string.Compare(ct.Id, this.Id, CultureInfo.InvariantCulture, CompareOptions.None) == 0
+                        select ct).FirstOrDefault();
             }
         }
 
@@ -149,7 +142,7 @@
                 if (dayPeriodNames != null)
                 {
                     return (from dpn in dayPeriodNames
-                            where string.Compare(dpn.Id, "am", false, CultureInfo.InvariantCulture) == 0
+                            where string.Compare(dpn.Id, "am", CultureInfo.InvariantCulture, CompareOptions.None) == 0
                             select dpn.Name).FirstOrDefault();
                 }
 
@@ -168,7 +161,7 @@
                 if (dayPeriodNames != null)
                 {
                     return (from dpn in dayPeriodNames
-                            where string.Compare(dpn.Id, "pm", false, CultureInfo.InvariantCulture) == 0
+                            where string.Compare(dpn.Id, "pm", CultureInfo.InvariantCulture, CompareOptions.None) == 0
                             select dpn.Name).FirstOrDefault();
                 }
 
@@ -373,7 +366,7 @@
         private string[] GetDayNames(string id)
         {
             DayName[] dayNames = (from dns in this.DayNameSets
-                                  where string.Compare(dns.Id, id, false, CultureInfo.InvariantCulture) == 0
+                                  where string.Compare(dns.Id, id, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                                   select dns.Names).FirstOrDefault();
             if (dayNames != null)
             {
@@ -392,7 +385,7 @@
         private string[] GetMonthNames(string id)
         {
             MonthName[] monthNames = (from dns in this.MonthNameSets
-                                      where string.Compare(dns.Id, id, false, CultureInfo.InvariantCulture) == 0
+                                      where string.Compare(dns.Id, id, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                                       select dns.Names).FirstOrDefault();
             if (monthNames != null)
             {
@@ -419,7 +412,7 @@
         private DayPeriodName[] GetDayPeriods(string id)
         {
             DayPeriodName[] dayPeriodNames = (from dns in this.DayPeriodNameSets
-                                              where string.Compare(dns.Id, id, false, CultureInfo.InvariantCulture) == 0
+                                              where string.Compare(dns.Id, id, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                                               select dns.Names).FirstOrDefault();
             if (dayPeriodNames != null)
             {
@@ -443,7 +436,7 @@
             }
 
             return (from df in this.DateFormats
-                    where string.Compare(df.Id, dateFormatId, false, CultureInfo.InvariantCulture) == 0
+                    where string.Compare(df.Id, dateFormatId, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                     select df.Pattern).FirstOrDefault();
         }
 
@@ -460,7 +453,7 @@
             }
 
             return (from tf in this.TimeFormats
-                    where string.Compare(tf.Id, timeFormatId, false, CultureInfo.InvariantCulture) == 0
+                    where string.Compare(tf.Id, timeFormatId, CultureInfo.InvariantCulture, CompareOptions.None) == 0
                     select tf.Pattern).FirstOrDefault();
         }
     }

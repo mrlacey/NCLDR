@@ -28,21 +28,14 @@
         {
             get
             {
-                try
-                {
-                    if (NCldr.CurrencyFractions == null)
-                    {
-                        return null;
-                    }
-
-                    return (from cf in NCldr.CurrencyFractions
-                            where string.Compare(cf.Id, this.Id, false, CultureInfo.InvariantCulture) == 0
-                            select cf).FirstOrDefault();
-                }
-                catch (Exception)
+                if (NCldr.CurrencyFractions == null)
                 {
                     return null;
                 }
+
+                return (from cf in NCldr.CurrencyFractions
+                        where string.Compare(cf.Id, this.Id, CultureInfo.InvariantCulture, CompareOptions.None) == 0
+                        select cf).FirstOrDefault();
             }
         }
     }

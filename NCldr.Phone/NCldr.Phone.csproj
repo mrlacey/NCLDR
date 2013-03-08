@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B415AC94-5247-40BC-AF66-9E5A07BE8931}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NCldr</RootNamespace>
+    <AssemblyName>NCldr.Phone</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\NCldr\INCldrData.cs">
+      <Link>INCldrData.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\NCldrData.cs">
+      <Link>NCldrData.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\NCldrLoader.cs">
+      <Link>NCldrLoader.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CalendarDisplayNames.cs">
+      <Link>Types\CalendarDisplayNames.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CalendarName.cs">
+      <Link>Types\CalendarName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CalendarNameSet.cs">
+      <Link>Types\CalendarNameSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CalendarPreference.cs">
+      <Link>Types\CalendarPreference.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CalendarType.cs">
+      <Link>Types\CalendarType.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Casing.cs">
+      <Link>Types\Casing.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CharacterFallback.cs">
+      <Link>Types\CharacterFallback.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Characters.cs">
+      <Link>Types\Characters.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CldrIdentifier.cs">
+      <Link>Types\CldrIdentifier.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CurrencyDisplayName.cs">
+      <Link>Types\CurrencyDisplayName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CurrencyDisplayNameSet.cs">
+      <Link>Types\CurrencyDisplayNameSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CurrencyFraction.cs">
+      <Link>Types\CurrencyFraction.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CurrencySpacing.cs">
+      <Link>Types\CurrencySpacing.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\CurrencySpacings.cs">
+      <Link>Types\CurrencySpacings.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DateFormat.cs">
+      <Link>Types\DateFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Dates.cs">
+      <Link>Types\Dates.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DateTimeFormat.cs">
+      <Link>Types\DateTimeFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DayName.cs">
+      <Link>Types\DayName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DayNameSet.cs">
+      <Link>Types\DayNameSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DayPeriodName.cs">
+      <Link>Types\DayPeriodName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DayPeriodNameSet.cs">
+      <Link>Types\DayPeriodNameSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DayPeriodRule.cs">
+      <Link>Types\DayPeriodRule.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DayPeriodRuleSet.cs">
+      <Link>Types\DayPeriodRuleSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DecimalFormatPattern.cs">
+      <Link>Types\DecimalFormatPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DecimalFormatPatternSet.cs">
+      <Link>Types\DecimalFormatPatternSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Delimiters.cs">
+      <Link>Types\Delimiters.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\DisplayName.cs">
+      <Link>Types\DisplayName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Era.cs">
+      <Link>Types\Era.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\EraName.cs">
+      <Link>Types\EraName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\EraNameSet.cs">
+      <Link>Types\EraNameSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\GenderList.cs">
+      <Link>Types\GenderList.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Identity.cs">
+      <Link>Types\Identity.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\IDescription.cs">
+      <Link>Types\IDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\IPeriod.cs">
+      <Link>Types\IPeriod.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\LanguageDisplayName.cs">
+      <Link>Types\LanguageDisplayName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\LanguageMatch.cs">
+      <Link>Types\LanguageMatch.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\LanguagePopulation.cs">
+      <Link>Types\LanguagePopulation.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\LikelySubTag.cs">
+      <Link>Types\LikelySubTag.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\ListPattern.cs">
+      <Link>Types\ListPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\MeasurementData.cs">
+      <Link>Types\MeasurementData.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Message.cs">
+      <Link>Types\Message.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\MetaTimeZone.cs">
+      <Link>Types\MetaTimeZone.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\MinDaysCount.cs">
+      <Link>Types\MinDaysCount.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\MonthName.cs">
+      <Link>Types\MonthName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\MonthNameSet.cs">
+      <Link>Types\MonthNameSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\NumberingSystemSymbols.cs">
+      <Link>Types\NumberingSystemSymbols.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\ParentCulture.cs">
+      <Link>Types\ParentCulture.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\PluralRuleSet.cs">
+      <Link>Types\PluralRuleSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\PostcodeRegex.cs">
+      <Link>Types\PostcodeRegex.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Reference.cs">
+      <Link>Types\Reference.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RegionCode.cs">
+      <Link>Types\RegionCode.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RegionDayOfWeek.cs">
+      <Link>Types\RegionDayOfWeek.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RegionDisplayName.cs">
+      <Link>Types\RegionDisplayName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RegionGroup.cs">
+      <Link>Types\RegionGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RegionInformation.cs">
+      <Link>Types\RegionInformation.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RegionPaperSize.cs">
+      <Link>Types\RegionPaperSize.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RegionTelephoneCode.cs">
+      <Link>Types\RegionTelephoneCode.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RuleBasedNumberFormatting.cs">
+      <Link>Types\RuleBasedNumberFormatting.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RuleBasedNumberFormattingRule.cs">
+      <Link>Types\RuleBasedNumberFormattingRule.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\RuleBasedNumberFormattingRuleSet.cs">
+      <Link>Types\RuleBasedNumberFormattingRuleSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\ScriptDisplayName.cs">
+      <Link>Types\ScriptDisplayName.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\TimeFormat.cs">
+      <Link>Types\TimeFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\TimeZone.cs">
+      <Link>Types\TimeZone.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\TimeZonePeriod.cs">
+      <Link>Types\TimeZonePeriod.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\TimeZoneRegion.cs">
+      <Link>Types\TimeZoneRegion.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\UnitPattern.cs">
+      <Link>Types\UnitPattern.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\UnitPatternSet.cs">
+      <Link>Types\UnitPatternSet.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\Variant.cs">
+      <Link>Types\Variant.cs</Link>
+    </Compile>
+    <Compile Include="..\NCldr\Types\WeekData.cs">
+      <Link>Types\WeekData.cs</Link>
+    </Compile>
+    <Compile Include="CultureInfoExtensions.cs" />
+    <Compile Include="NCldr.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionInfoExtensions.cs" />
+    <Compile Include="Types\Calendar.cs" />
+    <Compile Include="Types\CalendarAlgorithmType.cs" />
+    <Compile Include="Types\Culture.cs" />
+    <Compile Include="Types\CultureData.cs" />
+    <Compile Include="Types\CultureTypes.cs" />
+    <Compile Include="Types\Currency.cs" />
+    <Compile Include="Types\CurrencyPeriod.cs" />
+    <Compile Include="Types\DigitShapes.cs" />
+    <Compile Include="Types\ICloneable.cs" />
+    <Compile Include="Types\Language.cs" />
+    <Compile Include="Types\MessageSet.cs" />
+    <Compile Include="Types\NumberingSystem.cs" />
+    <Compile Include="Types\NumberingSystemType.cs" />
+    <Compile Include="Types\Numbers.cs" />
+    <Compile Include="Types\PluralRule.cs" />
+    <Compile Include="Types\Region.cs" />
+    <Compile Include="Types\RegionMeasurementSystem.cs" />
+    <Compile Include="Types\Script.cs" />
+    <Compile Include="Types\SerializableAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\sl4-windowsphone71\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
